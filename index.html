@@ -3,290 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veloura - Luxury Fashion & Beauty</title>
+<title>Veloura Marketplace</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:#0f0f0f;
-color:white;
+background:#f5f5f5;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-background:#000;
+header{
+background:#131921;
+padding:12px;
+color:white;
 position:sticky;
 top:0;
 z-index:1000;
 }
 
+.topbar{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
 .logo{
 font-size:28px;
 font-weight:bold;
-color:#d4af37;
+color:#ff9900;
 }
 
-nav ul{
+.search{
+flex:1;
+padding:12px;
+border:none;
+border-radius:4px;
+}
+
+.cart{
+font-size:22px;
+}
+
+.categories{
+background:#232f3e;
 display:flex;
-list-style:none;
+overflow:auto;
+padding:12px;
 gap:20px;
 }
 
-nav a{
-text-decoration:none;
+.categories a{
 color:white;
+text-decoration:none;
+white-space:nowrap;
 }
 
 .hero{
-height:90vh;
+height:250px;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#ff9900,#ff6b00);
+color:white;
 padding:20px;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1200');
-background-size:cover;
-background-position:center;
 }
 
-.hero-content h1{
-font-size:48px;
-margin-bottom:15px;
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
 }
 
-.hero-content p{
+.hero p{
 font-size:18px;
-margin-bottom:25px;
-}
-
-.btn{
-background:#d4af37;
-padding:12px 25px;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:30px;
-}
-
-section{
-padding:60px 20px;
 }
 
 .section-title{
-text-align:center;
-font-size:35px;
-margin-bottom:40px;
-color:#d4af37;
+font-size:28px;
+margin:20px;
+color:#131921;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+padding:20px;
 }
 
 .card{
-background:#1a1a1a;
-padding:15px;
-border-radius:15px;
-text-align:center;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 .card img{
 width:100%;
-height:250px;
+height:180px;
 object-fit:cover;
-border-radius:10px;
 }
 
-.card h3{
-margin-top:15px;
+.card-content{
+padding:10px;
 }
 
 .price{
-color:#d4af37;
-margin:10px 0;
-font-size:20px;
+color:#ff6b00;
+font-weight:bold;
+margin-top:5px;
 }
 
-.buy{
-background:#d4af37;
+.buy-btn{
+background:#ff9900;
 color:black;
-padding:10px 20px;
 border:none;
-border-radius:25px;
+padding:10px;
+width:100%;
+margin-top:10px;
 font-weight:bold;
 }
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.feature{
-background:#1a1a1a;
-padding:25px;
-border-radius:15px;
-}
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.review{
-background:#1a1a1a;
-padding:20px;
-border-radius:15px;
-}
-
-footer{
-background:#000;
-padding:40px 20px;
-text-align:center;
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-font-size:32px;
-}
-
-nav{
-flex-direction:column;
-gap:10px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-}
 </style>
 </head>
 
 <body>
 
-<nav>
+<header>
+<div class="topbar">
 <div class="logo">VELOURA</div>
+<input type="text" class="search" placeholder="Search products...">
+<div class="cart">🛒</div>
+</div>
+</header>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Fashion</a></li>
-<li><a href="#">Beauty</a></li>
-<li><a href="#">Collections</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
+<div class="categories">
+<a href="#">Fashion</a>
+<a href="#">Beauty</a>
+<a href="#">Electronics</a>
+<a href="#">Home</a>
+<a href="#">Kitchen</a>
+<a href="#">Accessories</a>
+<a href="#">Deals</a>
+<a href="#">New Arrivals</a>
+</div>
 
 <section class="hero">
-<div class="hero-content">
-<h1>Luxury Fashion & Beauty</h1>
-<p>Premium products designed for modern lifestyles.</p>
-<a href="#" class="btn">Shop Now</a>
+<div>
+<h1>Welcome to Veloura</h1>
+<p>Fashion, Beauty, Electronics & More</p>
 </div>
 </section>
 
-<section>
-<h2 class="section-title">Trending Products</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800">
-<h3>Premium T-Shirt</h3>
-<p class="price">₹999</p>
-<button class="buy">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800">
-<h3>Beauty Serum</h3>
-<p class="price">₹799</p>
-<button class="buy">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800">
-<h3>Luxury Sneakers</h3>
-<p class="price">₹2499</p>
-<button class="buy">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800">
-<h3>Fashion Collection</h3>
-<p class="price">₹1499</p>
-<button class="buy">Buy Now</button>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2 class="section-title">Why Choose Veloura</h2>
-
-<div class="features">
-
-<div class="feature">
-<h3>Premium Quality</h3>
-<p>Carefully selected products.</p>
-</div>
-
-<div class="feature">
-<h3>Fast Delivery</h3>
-<p>Quick and reliable shipping.</p>
-</div>
-
-<div class="feature">
-<h3>Secure Payments</h3>
-<p>Safe checkout experience.</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2 class="section-title">Customer Reviews</h2>
-
-<div class="testimonials">
-
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>Amazing quality and delivery.</p>
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>Beautiful products and packaging.</p>
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>Definitely ordering again.</p>
-</div>
-
-</div>
-</section>
-
-<footer>
-<h2>VELOURA</h2>
-<p>Luxury Fashion & Beauty Store</p>
-<p>© 2026 All Rights Reserved</p>
-</footer>
-
-</body>
-</html>
+<h2 class="section-title">Deals of the Day</h2>
