@@ -70,7 +70,7 @@ border-radius:5px;
   <option>Credit/Debit Card</option>
 </select>
 
-  <button type="button" onclick="alert('TEST')">Place Order</button>
+  <button type="button" onclick="placeOrder()">Place Order</button>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -81,6 +81,7 @@ const supabaseKey = "sb_publishable_EJvv6XPN71nwi4PqZYhvEQ_7so7-xs6";
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function placeOrder() {
+  alert("Function Started");
 
   try {
 
