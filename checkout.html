@@ -50,24 +50,24 @@ border-radius:5px;
 
 <h1>Checkout</h1>
 
-<input type="text" placeholder="Full Name">
+  <input id="full_name" type="text" placeholder="Full Name">
 
-<input type="tel" placeholder="Mobile Number">
+<input id="mobile" type="tel" placeholder="Mobile Number">
 
-<input type="email" placeholder="Email Address">
+<input id="email" type="email" placeholder="Email Address">
 
-<textarea placeholder="Full Address"></textarea>
+<textarea id="address" placeholder="Full Address"></textarea>
 
-<input type="text" placeholder="City">
+<input id="city" type="text" placeholder="City">
 
-<input type="text" placeholder="State">
+<input id="state" type="text" placeholder="State">
 
-<input type="text" placeholder="Pincode">
+<input id="pincode" type="text" placeholder="Pincode">
 
-<select>
-<option>Cash on Delivery</option>
-<option>UPI</option>
-<option>Credit/Debit Card</option>
+<select id="payment_method">
+  <option>Cash on Delivery</option>
+  <option>UPI</option>
+  <option>Credit/Debit Card</option>
 </select>
 
   <button onclick="placeOrder()">Place Order</button>
