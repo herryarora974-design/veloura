@@ -70,9 +70,48 @@ border-radius:5px;
 <option>Credit/Debit Card</option>
 </select>
 
-<button>Place Order</button>
+  <button onclick="placeOrder()">Place Order</button>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script>
+const supabaseUrl = "https://uinzlgwhntwqexlqjiuq.supabase.co";
+const supabaseKey = "sb_publishable_EJvv6XPN71nwi4PqZYhvEQ_7so7-xs6";
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+async function placeOrder() {
+
+  const full_name = document.getElementById("fullName").value;
+  const mobile = document.getElementById("mobile").value;
+  const email = document.getElementById("email").value;
+  const address = document.getElementById("address").value;
+  const city = document.getElementById("city").value;
+  const state = document.getElementById("state").value;
+  const pincode = document.getElementById("pincode").value;
+  const payment_method = document.getElementById("payment").value;
+
+  const { error } = await supabase
+    .from("orders")
+    .insert([
+      {
+        full_name,
+        mobile,
+        email,
+        address,
+        city,
+        state,
+        pincode,
+        payment_method
+      }
+    ]);
+
+  if (error) {
+    alert("Order failed: " + error.message);
+  } else {
+    alert("Order placed successfully!");
+  }
+}
+</script>
 </body>
 </html>
